@@ -66,10 +66,14 @@
     <div id=cent>
       <h3>
         YOUR CURRENT ASSESSMENTS
-        </h3>
-      </div>
+      </h3>
+    </div>
   
-  
+    <div>
+        {% for p in database %}
+          <div><h3>{{ p }}</h3></div>
+        {% endfor %}
+    </div>
   
   </body>
 </html>
