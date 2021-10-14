@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, flash
 from app import app 
 from .forms import AssessmentForm
 
@@ -21,6 +21,13 @@ def uncompleted():
 @app.route('/add', methods = ['GET', 'POST'])
 def add():
     form = AssessmentForm()
+
+
+    if form.validate_on_submit():
+        flash('Successfully received form data.')
+
+    for key in form.errors:
+        flash("%s field is required." % (key))
     return render_template("banner_templates/add.html", 
     title = 'Add an assessment', form = form)
 
