@@ -22,9 +22,23 @@
         letter-spacing: 10px;
         font-stretch: ultra-expanded;}
 
+        h4 {
+          text-align: left;
+          margin-left: 10vw;
+          font-weight: bolder;
+          color: palevioletred;
+          font-size: 30px;
+        }
+
+        h5 {
+          text-align: left;
+          margin-left: 10vw;
+          display: inline-block;
+          white-space: nowrap;
+        }
+
         br {
           display:block;
-          margin: 10px 0;
         }
 
         center {
@@ -33,13 +47,22 @@
           border: 3px solid green;
           padding: 10px;
         }
-        
-        p {
-          color: coral;
-          font-weight: bolder;
-          text-align: left;
-          font-size: 20px;
-          margin-left: 15vw;
+
+        .button
+        {
+            font-size: 30px;
+            color:white;
+            font-weight: bolder;
+            background-color: lightblue;
+            border: none;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .button:hover {
+            background-color: darkcyan;
+            color: white;
         }
 
         </style>
@@ -75,15 +98,28 @@
       <h3>
         ADD A NEW ASSESSMENT
       </h3>  
+
+      <br style = "margin-top: 100px">
     
-    <div>
-      <br style = "margin: 100px 0">
-      <form action = "" method = "post" name = "Title">
+    <div id="center">
+      <form action = "" method = "post" name = "assessmentform">
         {{ form.hidden_tag() }}
-        <p> NAME {{ form.name }} <br>
-         MODULE {{ form.module }} <br>
-         DESCRIPTION {{ form.description (style = 'height: 100px')}} <br>
-        <input type = "submit" value = "Add"></p>
+
+      <h4>NAME</h4>
+      <h5>{{ form.name }}</h5>
+
+      <h4>MODULE</h4> 
+      <h5>{{ form.module }}</h5>
+
+      <h4>DUE DATE</h4> 
+      <h5>{{ form.date }}</h5>
+
+      <h4>DESCRIPTION</h4>
+      <h5>{{ form.description (rows = '4', cols = '80')}}</h5>
+
+      <h4>COMPLETED {{ form.completed }}</h4>
+
+      <h5><input type = "submit" value = "ADD" class = "button"></h5>
       </form>
     </div>
   </body>

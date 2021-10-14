@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app 
-from .forms import TextForm
+from .forms import AssessmentForm
 
 @app.route('/')
 def home():
@@ -20,7 +20,7 @@ def uncompleted():
 
 @app.route('/add', methods = ['GET', 'POST'])
 def add():
-    form = TextForm()
+    form = AssessmentForm()
     return render_template("banner_templates/add.html", 
     title = 'Add an assessment', form = form)
 
