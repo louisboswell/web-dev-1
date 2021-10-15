@@ -55,6 +55,29 @@
           background-color: whitesmoke;
         }
 
+        .button
+        {
+            font-size: 30px;
+            color:white;
+            font-weight: bolder;
+            background-color: lightblue;
+            border: none;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+
+        .disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+          }
+
+        .button:hover {
+            background-color: darkcyan;
+            color: white;
+        }
+
         </style>
   </head>
 
@@ -102,12 +125,24 @@
 
             <h8>Due: {{ p.date }}</h8> <br style = "margin: 0px;">
 
-            <h8 style="text-transform:none;">{{ p.description }}</h8> 
+            <h8 style="text-transform:none;">{{ p.description }}</h8> <br style = "margin: 0px;">
 
             {% if p.completed == True %}
-            <h8 style="color:rgb(23, 201, 112);">Completed</h8>
+            <h8 style="color:rgb(23, 201, 112); text-transform:uppercase;">Completed</h8>
             {% else %}
-            <h8 style="color:firebrick;">Not completed</h8>
+            <h8 style="color:firebrick; text-transform: uppercase;">Not completed</h8>
+            {% endif %}<br style = "margin: 0px;">
+
+            {% if p.completed == False %}
+
+              <buttinpon class = "button" type="button" style = "margin-left: 15px">MARK COMPLETE</button> 
+              <button class = "button" style = "background-color: red; margin-left: 56vw;" type="button">DELETE</button> 
+
+              {% else %}
+            
+              <button class = "button disabled" type="button" style = "margin-left: 15px">MARK COMPLETE</button> 
+              <button class = "button" style = "background-color: red; margin-left: 56vw;" type="button">DELETE</button> 
+            
             {% endif %}
 
             <br style = "margin: 20px;">
