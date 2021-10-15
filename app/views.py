@@ -9,10 +9,25 @@ def home():
     number = len(models.Assessment.query.filter_by(completed = False).all())
     return render_template("home.html", number = number)
 
-@app.route('/all')
+@app.route('/all', methods = ['GET', 'POST'])
 def all():
     database = models.Assessment.query.all()
     return render_template("banner_templates/all.html", database = database)
+
+# Route used for setting an assessment to complete
+@app.route('/complete', methods = ['GET', 'POST'])
+def complete():
+    print('COMPLETE BUTTON WORKING')
+    database = models.Assessment.query.all()
+    return render_template("banner_templates/all.html", database = database)
+
+# Route used for deleting an assessment
+@app.route('/delete', methods = ['GET', 'POST'])
+def delete():
+    print('DELETE BUTTON WORKING')
+    database = models.Assessment.query.all()
+    return render_template("banner_templates/all.html", database = database)
+
 
 @app.route('/completed')
 def completed():

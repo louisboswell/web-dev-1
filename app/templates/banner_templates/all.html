@@ -136,11 +136,11 @@
 
             <div style = "margin-left: 65%; margin-right: 5%">
               {% if p.completed == False %}
-              <input type = "submit" class = "button" id = '{{p.name}}' value = "MARK COMPLETE">
+              <a href="/complete"><input type = "submit" class = "button" id = '{{p.name}}' value = "MARK COMPLETE"></a>
 
-              <input type = "submit" class = "button" id = '{{p.name}}' value = "DELETE" style="background-color: red;">
+              <a href="/delete"><input type = "submit" class = "button" id = '{{p.name}}' value = "DELETE" style="background-color: red;"></a>
               {% else %}
-              <input type = "submit" class = "button" id = '{{p.name}}' value = "DELETE" style="background-color: red;">
+              <a href="/delete"><input type = "submit" class = "button" id = '{{p.name}}' value = "DELETE" style="background-color: red;"></a>
               {% endif %}
             </div>
 
