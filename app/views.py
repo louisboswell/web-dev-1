@@ -1,4 +1,4 @@
-from flask import render_template, flash
+from flask import render_template, flash, request
 from app import app, models, db
 from .forms import AssessmentForm
 
@@ -17,16 +17,20 @@ def all():
 # Route used for setting an assessment to complete
 @app.route('/complete', methods = ['GET', 'POST'])
 def complete():
+
     print('COMPLETE BUTTON WORKING')
-    print(request.data)
+    print(request.form.getlist('name'))
+
     database = models.Assessment.query.all()
     return render_template("banner_templates/all.html", database = database)
 
 # Route used for deleting an assessment
 @app.route('/delete', methods = ['GET', 'POST'])
 def delete():
+
     print('DELETE BUTTON WORKING')
     print(request.data)
+
     database = models.Assessment.query.all()
     return render_template("banner_templates/all.html", database = database)
 

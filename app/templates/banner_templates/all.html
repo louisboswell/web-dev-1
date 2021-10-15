@@ -134,15 +134,17 @@
             {% endif %}
             <br style = "margin: 0px;">
 
-            <div style = "margin-left: 65%; margin-right: 5%">
-              {% if p.completed == False %}
-              <a href="/complete"><input type = "submit" class = "button" id = '{{p.name}}' value = "MARK COMPLETE"></a>
+            <form method = "get">
+              <div style = "margin-left: 65%; margin-right: 5%">
+                {% if p.completed == False %}
+                <a href="/complete"><input type = "submit" class = "button" name = 'once' value = "MARK COMPLETE"></a>
 
-              <a href="/delete"><input type = "submit" class = "button" id = '{{p.name}}' value = "DELETE" style="background-color: red;"></a>
-              {% else %}
-              <a href="/delete"><input type = "submit" class = "button" id = '{{p.name}}' value = "DELETE" style="background-color: red;"></a>
-              {% endif %}
-            </div>
+                <a href="/delete"><input type = "submit" class = "button" name = '{{p.name}}' value = "DELETE" style="background-color: red;"></a>
+                {% else %}
+                <a href="/delete"><input type = "submit" class = "button" name = '{{p.name}}' value = "DELETE" style="background-color: red;"></a>
+                {% endif %}
+              </div>
+            </form>
 
             <br style = "margin: 20px;">
           </div>
