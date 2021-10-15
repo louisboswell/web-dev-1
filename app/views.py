@@ -18,6 +18,7 @@ def all():
 @app.route('/complete', methods = ['GET', 'POST'])
 def complete():
     print('COMPLETE BUTTON WORKING')
+    print(request.data)
     database = models.Assessment.query.all()
     return render_template("banner_templates/all.html", database = database)
 
@@ -25,6 +26,7 @@ def complete():
 @app.route('/delete', methods = ['GET', 'POST'])
 def delete():
     print('DELETE BUTTON WORKING')
+    print(request.data)
     database = models.Assessment.query.all()
     return render_template("banner_templates/all.html", database = database)
 
