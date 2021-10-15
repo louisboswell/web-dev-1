@@ -6,9 +6,10 @@ from wtforms import DateTimeField
 from wtforms import TextAreaField
 
 from wtforms.validators import DataRequired
+
 class AssessmentForm(Form):
     name = TextField('Name', validators = [DataRequired()])
     module = TextField('Module', validators = [DataRequired()])
-    description = TextAreaField('Description', validators = [DataRequired()])
+    description = TextAreaField('Description')
     completed = BooleanField('Completed')
     date = DateField('date', validators = [DataRequired()])

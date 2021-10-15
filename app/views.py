@@ -5,8 +5,7 @@ from .forms import AssessmentForm
 
 @app.route('/')
 def home():
-    number = str(len(models.Assessment.query.filter_by(completed = False).all()))
-    print(number)
+    number = len(models.Assessment.query.filter_by(completed = False).all())
     return render_template("home.html", number = number)
 
 @app.route('/all')
