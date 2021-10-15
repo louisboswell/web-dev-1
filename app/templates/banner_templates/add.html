@@ -24,7 +24,7 @@
 
         h4 {
           text-align: left;
-          margin-left: 10vw;
+          margin-left: 10px;
           font-weight: bolder;
           color: palevioletred;
           font-size: 30px;
@@ -32,7 +32,7 @@
 
         h5 {
           text-align: left;
-          margin-left: 10vw;
+          margin-left: 10px;
           display: inline-block;
           white-space: nowrap;
         }
@@ -41,10 +41,10 @@
           display:block;
         }
 
-        center {
+        .center {
           margin: auto;
-          width: 50%;
-          border: 3px solid green;
+          width: 70%;
+          background-color: whitesmoke;
           padding: 10px;
         }
 
@@ -112,7 +112,7 @@
      {% endwith %}
 
     
-    <div id="center">
+    <div class="center">
       <form action = "" method = "post" name = "assessmentform">
         {{ form.hidden_tag() }}
 

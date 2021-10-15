@@ -2,22 +2,27 @@ from flask import render_template, flash
 from app import app, models, db
 from .forms import AssessmentForm
 
+
 @app.route('/')
 def home():
-    return render_template("home.html")
+    number = str(len(models.Assessment.query.filter_by(completed = False).all()))
+    print(number)
+    return render_template("home.html", number = number)
 
 @app.route('/all')
 def all():
     database = models.Assessment.query.all()
-    return render_template("banner_templates/all.html")
+    return render_template("banner_templates/all.html", database = database)
 
 @app.route('/completed')
 def completed():
-    return render_template("banner_templates/completed.html")
+    database = models.Assessment.query.filter_by(completed = True).all()
+    return render_template("banner_templates/completed.html", database = database)
 
 @app.route('/uncompleted')
 def uncompleted():
-    return render_template("banner_templates/uncompleted.html")
+        database = models.Assessment.query.filter_by(completed = False).all()
+        return render_template("banner_templates/uncompleted.html", database = database)
 
 @app.route('/add', methods = ['GET', 'POST'])
 def add():

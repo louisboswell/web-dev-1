@@ -33,6 +33,28 @@
           justify-content: center;
           align-items: center;}
         
+        h7 {
+          margin-left: 15px;
+          color: palevioletred;
+          text-transform: uppercase;
+          font-size: 50px;
+          font-weight: bolder;
+        }
+
+        h8 {
+          margin-left: 15px;
+          color: pink;
+          font-size: 25px;
+          font-weight: bolder;
+        }
+
+
+        .box {
+          margin-left: 10vw;
+          width: 80vw;
+          background-color: whitesmoke;
+        }
+
         </style>
   </head>
 
@@ -66,10 +88,32 @@
     <div id=cent>
       <h3>
         YOUR UNCOMPLETED ASSESSMENTS
-        </h3>
-      </div>
+      </h3>
+    </div>
+
+    <br style = "margin: 20px;">
   
-  
+    <div>
+        {% for p in database %}
+          <div  class= "box">
+            <h7>{{ p.name }}</h7> <br style = "margin: 0px;">
+
+            <h7 style = "color: plum; font-size: 35px;">{{ p.module }}</h8> <br style = "margin: 0px;">
+
+            <h8>Due: {{ p.date }}</h8> <br style = "margin: 0px;">
+
+            <h8 style="text-transform:none;">{{ p.description }}</h8> 
+
+            {% if p.completed == True %}
+            <h8 style="color:rgb(23, 201, 112);">Completed</h8>
+            {% else %}
+            <h8 style="color:firebrick;">Not completed</h8>
+            {% endif %}
+
+            <br style = "margin: 20px;">
+          </div>
+        {% endfor %}
+    </div>
   
   </body>
 </html>
