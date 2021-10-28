@@ -134,17 +134,18 @@
             {% endif %}
             <br style = "margin: 0px;">
 
-            <form method = "get">
               <div style = "margin-left: 65%; margin-right: 5%">
                 {% if p.completed == False %}
-                <a href="/complete"><input type = "submit" class = "button" name = 'once' value = "MARK COMPLETE"></a>
 
-                <a href="/delete"><input type = "submit" class = "button" name = '{{p.name}}' value = "DELETE" style="background-color: red;"></a>
-                {% else %}
-                <a href="/delete"><input type = "submit" class = "button" name = '{{p.name}}' value = "DELETE" style="background-color: red;"></a>
+                  <form action ="{{ url_for('uncompleted') }}" method="post">
+                        <input type = "hidden" class = "test-name" value="{{ p.name}}"></input>
+                       <input type = "submit" class = "button" name = 'once' value = "MARK COMPLETE"></input>
+
+                       
+                  </form>
+
                 {% endif %}
               </div>
-            </form>
 
             <br style = "margin: 20px;">
           </div>

@@ -12,6 +12,17 @@ def home():
 @app.route('/all', methods = ['GET', 'POST'])
 def all():
     database = models.Assessment.query.all()
+
+    testname = request.form.get('test-name')
+
+    if (testname is not None):
+        completedTask = models.Assessment.query.get(testname)
+        if (isinstance(completedTask,models.Assessment) == True):
+            completedTask.completed = False
+            print("completed")
+            print(completedTask.completed())
+            db.session.commit()
+
     return render_template("banner_templates/all.html", database = database)
 
 # Route used for setting an assessment to complete
