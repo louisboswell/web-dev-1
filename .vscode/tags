@@ -1,0 +1,86 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+config.py	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/config.py	1;"	kind:file	line:1
+os	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/config.py	/^import os$/;"	kind:namespace	line:1
+WTF_CSRF_ENABLED	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/config.py	/^WTF_CSRF_ENABLED = True$/;"	kind:variable	line:3
+SECRET_KEY	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/config.py	/^SECRET_KEY = 'secret-key'$/;"	kind:variable	line:4
+basedir	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/config.py	/^basedir = os.path.abspath(os.path.dirname(__file__))$/;"	kind:variable	line:6
+SQLALCHEMY_DATABASE_URI	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/config.py	/^SQLALCHEMY_DATABASE_URI = 'sqlite:\/\/\/' + os.path.join(basedir, 'app.db')$/;"	kind:variable	line:7
+SQLALCHEMY_TRACK_MODIFICATIONS	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/config.py	/^SQLALCHEMY_TRACK_MODIFICATIONS = True    /;"	kind:variable	line:8
+run.py	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/run.py	1;"	kind:file	line:1
+app	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/run.py	/^from app import app$/;"	kind:namespace	line:1
+59340c174c28_initial_migration.py	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/versions/59340c174c28_initial_migration.py	1;"	kind:file	line:1
+op	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/versions/59340c174c28_initial_migration.py	/^from alembic import op$/;"	kind:namespace	line:8
+sa	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/versions/59340c174c28_initial_migration.py	/^import sqlalchemy as sa$/;"	kind:namespace	line:9
+revision	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/versions/59340c174c28_initial_migration.py	/^revision = '59340c174c28'$/;"	kind:variable	line:13
+down_revision	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/versions/59340c174c28_initial_migration.py	/^down_revision = None$/;"	kind:variable	line:14
+branch_labels	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/versions/59340c174c28_initial_migration.py	/^branch_labels = None$/;"	kind:variable	line:15
+depends_on	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/versions/59340c174c28_initial_migration.py	/^depends_on = None$/;"	kind:variable	line:16
+upgrade	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/versions/59340c174c28_initial_migration.py	/^def upgrade():$/;"	kind:function	line:19
+downgrade	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/versions/59340c174c28_initial_migration.py	/^def downgrade():$/;"	kind:function	line:34
+env.py	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	1;"	kind:file	line:1
+with_statement	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^from __future__ import with_statement$/;"	kind:namespace	line:1
+logging	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^import logging$/;"	kind:namespace	line:3
+fileConfig	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^from logging.config import fileConfig$/;"	kind:namespace	line:4
+current_app	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^from flask import current_app$/;"	kind:namespace	line:6
+context	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^from alembic import context$/;"	kind:namespace	line:8
+config	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^config = context.config$/;"	kind:variable	line:12
+logger	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^logger = logging.getLogger('alembic.env')$/;"	kind:variable	line:17
+target_metadata	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^target_metadata = current_app.extensions['migrate'].db.metadata$/;"	kind:variable	line:27
+run_migrations_offline	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^def run_migrations_offline():$/;"	kind:function	line:35
+run_migrations_online	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^def run_migrations_online():$/;"	kind:function	line:56
+process_revision_directives	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/migrations/env.py	/^    def process_revision_directives(context, revision, directives):$/;"	kind:function	line:67
+forms.py	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	1;"	kind:file	line:1
+Form	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^from flask_wtf import Form$/;"	kind:namespace	line:1
+TextField	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^from wtforms import TextField$/;"	kind:namespace	line:2
+BooleanField	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^from wtforms import BooleanField$/;"	kind:namespace	line:3
+DateTimeField	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^from wtforms import DateTimeField$/;"	kind:namespace	line:4
+TextAreaField	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^from wtforms import TextAreaField$/;"	kind:namespace	line:5
+DateField	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^from wtforms.fields.html5 import DateField$/;"	kind:namespace	line:6
+datetime	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^from datetime import datetime$/;"	kind:namespace	line:8
+DataRequired	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^from wtforms.validators import DataRequired$/;"	kind:namespace	line:10
+AssessmentForm	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^class AssessmentForm(Form):$/;"	kind:class	line:12
+name	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^    name = TextField('Name', validators = [DataRequired()])$/;"	kind:variable	line:13
+module	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^    module = TextField('Module', validators = [DataRequired()])$/;"	kind:variable	line:14
+description	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^    description = TextAreaField('Description')$/;"	kind:variable	line:15
+completed	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^    completed = BooleanField('Completed')$/;"	kind:variable	line:16
+date	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/forms.py	/^    date = DateField('date', validators = [DataRequired()], default = datetime.now())/;"	kind:variable	line:17
+__init__.py	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/__init__.py	1;"	kind:file	line:1
+Flask	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/__init__.py	/^from flask import Flask$/;"	kind:namespace	line:1
+SQLAlchemy	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/__init__.py	/^from flask_sqlalchemy import SQLAlchemy$/;"	kind:namespace	line:2
+Migrate	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/__init__.py	/^from flask_migrate import Migrate$/;"	kind:namespace	line:3
+app	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/__init__.py	/^app = Flask(__name__)$/;"	kind:variable	line:5
+db	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/__init__.py	/^db = SQLAlchemy(app)$/;"	kind:variable	line:7
+migrate	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/__init__.py	/^migrate = Migrate(app, db)$/;"	kind:variable	line:9
+views	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/__init__.py	/^from app import views, models/;"	kind:namespace	line:11
+models	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/__init__.py	/^from app import views, models/;"	kind:namespace	line:11
+views.py	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	1;"	kind:file	line:1
+render_template	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^from flask import render_template, flash, request$/;"	kind:namespace	line:1
+flash	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^from flask import render_template, flash, request$/;"	kind:namespace	line:1
+request	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^from flask import render_template, flash, request$/;"	kind:namespace	line:1
+app	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^from app import app, models, db$/;"	kind:namespace	line:2
+models	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^from app import app, models, db$/;"	kind:namespace	line:2
+db	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^from app import app, models, db$/;"	kind:namespace	line:2
+AssessmentForm	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^from .forms import AssessmentForm$/;"	kind:namespace	line:3
+home	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^def home():$/;"	kind:function	line:8
+all	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^def all():$/;"	kind:function	line:13
+completed	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^def completed():$/;"	kind:function	line:36
+uncompleted	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^def uncompleted():$/;"	kind:function	line:41
+add	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/views.py	/^def add():$/;"	kind:function	line:46
+models.py	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/models.py	1;"	kind:file	line:1
+db	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/models.py	/^from app import db$/;"	kind:namespace	line:1
+Assessment	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/models.py	/^class Assessment(db.Model):$/;"	kind:class	line:3
+name	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/models.py	/^    name = db.Column(db.String(20), primary_key = True)$/;"	kind:variable	line:4
+module	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/models.py	/^    module = db.Column(db.String(20), index = True)$/;"	kind:variable	line:5
+date	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/models.py	/^    date = db.Column(db.DateTime)$/;"	kind:variable	line:6
+description	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/models.py	/^    description = db.Column(db.String(500), index = True)$/;"	kind:variable	line:7
+completed	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/app/models.py	/^    completed = db.Column(db.Boolean)/;"	kind:variable	line:8
+db_create.py	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/db_create.py	1;"	kind:file	line:1
+SQLALCHEMY_DATABASE_URI	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/db_create.py	/^from config import SQLALCHEMY_DATABASE_URI$/;"	kind:namespace	line:1
+db	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/db_create.py	/^from app import db$/;"	kind:namespace	line:2
+os	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/db_create.py	/^import os.path$/;"	kind:namespace	line:3
+path	../../../../../../cserv1_a/soc_ug/ed193lb/Documents/Web Application Development/web-dev-1/db_create.py	/^import os.path$/;"	kind:namespace	line:3
