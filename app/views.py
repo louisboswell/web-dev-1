@@ -2,7 +2,6 @@ from flask import render_template, flash, request
 from app import app, models, db
 from .forms import AssessmentForm
 
-# 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
 
 @app.route('/')
 def home():
@@ -13,29 +12,30 @@ def home():
 def all():
     database = models.Assessment.query.all()
 
-    testname = request.form.get('test-name')
+    testname = request.form.get('assessmentName')
+    delete = request.form.get('delete')
+    complete = request.form.get('complete')
+
 
     if (testname is not None):
         completedTask = models.Assessment.query.get(testname)
         if (isinstance(completedTask,models.Assessment) == True):
-            completedTask.completed = True
-            print("completed")
 
-            print(str(completedTask.completed))
-            db.session.commit()
+            if (delete is not None):
+                db.session.delete(completedTask)
+                db.session.commit()
+
+            if (complete is not None):
+                completedTask.completed = True
+                db.session.commit()
 
     return render_template("banner_templates/all.html", database = database)
 
-# Route used for deleting an assessment
-@app.route('/delete', methods = ['GET', 'POST'])
-def delete():
-
-    print('DELETE BUTTON WORKING')
-    print(request.data)
-
-    database = models.Assessment.query.all()
-    return render_template("banner_templates/all.html", database = database)
-
+# TO DO LIST
+# SEPERATE STYLE SHEETS
+# ONLY ONE PAGE WITH THREE BUTTONS FOR VIEW ALL, COMPLETED OR UNCOMPLETED
+# MAYBE REMOVE FROM PAGE
+# ESSAY
 
 @app.route('/completed')
 def completed():

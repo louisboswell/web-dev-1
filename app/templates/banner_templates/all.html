@@ -135,16 +135,20 @@
             <br style = "margin: 0px;">
 
               <div style = "margin-left: 65%; margin-right: 5%">
-                {% if p.completed == False %}
 
                   <form action ="{{ url_for('all') }}" method="post">
-                        <input type = "hidden" name = "test-name" value="{{ p.name}}">
-                       <input type = "submit" class = "button" value = "MARK COMPLETE">
+
+                    {% if p.completed == False %}
+
+                    <input type = "submit" class = "button" name = "complete" value = "MARK COMPLETE">
+
+                {% endif %}
+                      <input type = "hidden" name = "assessmentName" value="{{ p.name}}">
+                      <input type = "submit" style="background-color: red;" class = "button" name = "delete" value = "DELETE">
 
                        
                   </form>
 
-                {% endif %}
               </div>
 
             <br style = "margin: 20px;">
