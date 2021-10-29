@@ -40,11 +40,49 @@ def all():
 @app.route('/completed')
 def completed():
     database = models.Assessment.query.filter_by(completed = True).all()
+
+
+    testname = request.form.get('assessmentName')
+    delete = request.form.get('delete')
+    complete = request.form.get('complete')
+
+
+    if (testname is not None):
+        completedTask = models.Assessment.query.get(testname)
+        if (isinstance(completedTask,models.Assessment) == True):
+
+            if (delete is not None):
+                db.session.delete(completedTask)
+                db.session.commit()
+
+            if (complete is not None):
+                completedTask.completed = True
+                db.session.commit()
+
     return render_template("banner_templates/completed.html", database = database)
 
 @app.route('/uncompleted')
 def uncompleted():
         database = models.Assessment.query.filter_by(completed = False).all()
+
+
+        testname = request.form.get('assessmentName')
+        delete = request.form.get('delete')
+        complete = request.form.get('complete')
+
+
+        if (testname is not None):
+            completedTask = models.Assessment.query.get(testname)
+            if (isinstance(completedTask,models.Assessment) == True):
+
+                if (delete is not None):
+                    db.session.delete(completedTask)
+                    db.session.commit()
+
+                if (complete is not None):
+                    completedTask.completed = True
+                    db.session.commit()
+                    
         return render_template("banner_templates/uncompleted.html", database = database)
 
 @app.route('/add', methods = ['GET', 'POST'])

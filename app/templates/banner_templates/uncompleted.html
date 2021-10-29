@@ -55,6 +55,29 @@
           background-color: whitesmoke;
         }
 
+        .button
+        {
+            font-size: 30px;
+            color:white;
+            font-weight: bolder;
+            background-color: lightblue;
+            border: none;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+
+        .disabled {
+            opacity: 0;
+            cursor: not-allowed;
+          }
+
+        .button:hover {
+            background-color: darkcyan;
+            color: white;
+        }
+
         </style>
   </head>
 
@@ -102,13 +125,31 @@
 
             <h8>Due: {{ p.date }}</h8> <br style = "margin: 0px;">
 
-            <h8 style="text-transform:none;">{{ p.description }}</h8> 
+            <h8 style="text-transform:none;">{{ p.description }}</h8> <br style = "margin: 0px;">
 
             {% if p.completed == True %}
-            <h8 style="color:rgb(23, 201, 112);">Completed</h8>
+            <h8 style="color:rgb(23, 201, 112); text-transform:uppercase;">Completed</h8>
             {% else %}
-            <h8 style="color:firebrick;">Not completed</h8>
+            <h8 style="color:firebrick; text-transform: uppercase;">Not completed</h8>
             {% endif %}
+            <br style = "margin: 0px;">
+
+              <div style = "margin-left: 65%; margin-right: 5%">
+
+                  <form action ="{{ url_for('all') }}" method="post">
+
+                    {% if p.completed == False %}
+
+                    <input type = "submit" class = "button" name = "complete" value = "MARK COMPLETE">
+
+                {% endif %}
+                      <input type = "hidden" name = "assessmentName" value="{{ p.name}}">
+                      <input type = "submit" style="background-color: red;" class = "button" name = "delete" value = "DELETE">
+
+                       
+                  </form>
+
+              </div>
 
             <br style = "margin: 20px;">
           </div>
