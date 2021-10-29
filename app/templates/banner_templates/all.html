@@ -137,9 +137,9 @@
               <div style = "margin-left: 65%; margin-right: 5%">
                 {% if p.completed == False %}
 
-                  <form action ="{{ url_for('uncompleted') }}" method="post">
-                        <input type = "hidden" class = "test-name" value="{{ p.name}}"></input>
-                       <input type = "submit" class = "button" name = 'once' value = "MARK COMPLETE"></input>
+                  <form action ="{{ url_for('all') }}" method="post">
+                        <input type = "hidden" name = "test-name" value="{{ p.name}}">
+                       <input type = "submit" class = "button" value = "MARK COMPLETE">
 
                        
                   </form>

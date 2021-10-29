@@ -18,21 +18,12 @@ def all():
     if (testname is not None):
         completedTask = models.Assessment.query.get(testname)
         if (isinstance(completedTask,models.Assessment) == True):
-            completedTask.completed = False
+            completedTask.completed = True
             print("completed")
-            print(completedTask.completed())
+
+            print(str(completedTask.completed))
             db.session.commit()
 
-    return render_template("banner_templates/all.html", database = database)
-
-# Route used for setting an assessment to complete
-@app.route('/complete', methods = ['GET', 'POST'])
-def complete():
-
-    print('COMPLETE BUTTON WORKING')
-    print(request.form.getlist('name'))
-
-    database = models.Assessment.query.all()
     return render_template("banner_templates/all.html", database = database)
 
 # Route used for deleting an assessment
